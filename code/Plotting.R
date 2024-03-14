@@ -101,7 +101,7 @@ ExtRdmNC<-ggplot(ExtinctionRANDOM_NOCOMP ,aes(x=Nsp,y=log10(BPc)))+
                  size=3, bins=20, geom='polygon') +
   scale_fill_gradientn(colours=r)+
   #scale_y_continuous(limits = c(-3, 2.5))+
-  stat_smooth(method = "gam", formula = y ~ s(x), colour="black", size = 1)+
+  stat_smooth(method = "gam", formula = y ~ s(x, k=4), colour="black", size = 1)+
   theme_bw()+
   theme(legend.position="none", plot.title = element_text(size=10),
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
@@ -116,7 +116,7 @@ ExtSenNC<-ggplot(ExtinctionSensitivity_NOCOMP ,aes(x=Nsp,y=log10(BPc)))+
                  size=3, bins=20, geom='polygon') +
   scale_fill_gradientn(colours=r)+
   #scale_y_continuous(limits = c(-3, 2.5))+
-  stat_smooth(method = "gam", formula = y ~ s(x), colour="black", size = 1)+
+  stat_smooth(method = "gam", formula = y ~ s(x, k=4), colour="black", size = 1)+
   theme_bw()+
   theme(legend.position="none", plot.title = element_text(size=10),
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
@@ -131,7 +131,7 @@ ExtRdmC<-ggplot(ExtinctionRANDOM_COMP ,aes(x=Nsp,y=log10(BPc)))+
                  size=3, bins=20, geom='polygon') +
   scale_fill_gradientn(colours=r)+
   #scale_y_continuous(limits = c(-3, 2.5))+
-  stat_smooth(method = "gam", formula = y ~ s(x), colour="black", size = 1)+
+  stat_smooth(method = "gam", formula = y ~ s(x, k=4), colour="black", size = 1)+
   theme_bw()+
   theme(legend.position="none", plot.title = element_text(size=10),
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
@@ -146,7 +146,7 @@ ExtSenC<-ggplot(ExtinctionSensitivity_COMP ,aes(x=Nsp,y=log10(BPc)))+
                  size=3, bins=20, geom='polygon') +
   scale_fill_gradientn(colours=r)+
   #scale_y_continuous(limits = c(-3, 2.5))+
-  stat_smooth(method = "gam", formula = y ~ s(x), colour="black", size = 1)+
+  stat_smooth(method = "gam", formula = y ~ s(x, k=4), colour="black", size = 1)+
   theme_bw()+
   theme(legend.position="none", plot.title = element_text(size=10),
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
